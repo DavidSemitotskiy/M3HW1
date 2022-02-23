@@ -13,6 +13,12 @@ namespace M3HW1
         private int _tail = 0;
         public MyList(T[] data)
         {
+            if (data.Length > _data.Length)
+            {
+                T[] temp = new T[_data.Length * 2];
+                _data = temp;
+            }
+
             Array.Copy(data, _data, data.Length);
             _tail = data.Length;
         }
