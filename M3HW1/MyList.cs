@@ -58,7 +58,7 @@ namespace M3HW1
         {
             if (collection == null)
             {
-                throw new ArgumentNullException("collection is null");
+                return;
             }
 
             foreach (T item in collection)
